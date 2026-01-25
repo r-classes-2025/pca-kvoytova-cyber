@@ -32,7 +32,7 @@ friends_tokens <- friends |>
 friends_tf <- friends_tokens |>
   count(speaker, word) |>
   group_by(speaker) |> 
-  arrange(desc(n), .by_group = TRUE) |>
+  arrange(desc(n), word, .by_group = TRUE) |>
   slice_head(n = 500) |>
   mutate(tf = n / sum(n)) |> 
   ungroup()
