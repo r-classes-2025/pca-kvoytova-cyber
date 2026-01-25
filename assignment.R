@@ -29,14 +29,6 @@ friends_tokens <- friends |>
 
 # 3. отберите по 500 самых частотных слов для каждого персонажа
 # посчитайте относительные частотности для слов
-#friends_tf <- friends_tokens |>
-#count(speaker, word) |>
-#group_by(speaker) |> 
-#arrange(desc(n), word, .by_group = TRUE) |>
-#slice_head(n = 500) |>
-#mutate(tf = n / sum(n)) |> 
-#ungroup()
- 
 friends_tf <- friends_tokens |>
   count(speaker, word) |>
   group_by(speaker) |> 
