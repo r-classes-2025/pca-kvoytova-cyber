@@ -12,8 +12,6 @@ top_speakers <- friends |>
   slice_head(n =6) |> 
     pull(speaker) 
 
-  print(top_speakers)
-
   
 # 2. отфильтруйте топ-спикеров, 
 # токенизируйте их реплики, удалите из них цифры
